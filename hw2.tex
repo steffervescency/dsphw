@@ -116,20 +116,19 @@ H(e^{-j\omega}) &= \sum_{n=-\infty}^{\infty} h(n) \cdot e^{-i \omega n} = h(0) +
 \end{aligned}$
 
 \item 
+$\begin{aligned}[t]
+A(\omega) &= \lvert H(e^{-j\omega}) \rvert \\
+&= \lvert \frac{1}{2}\cdot[1 + e^{-j\omega}] \rvert \\
+&= \frac{1}{2} \lvert 1 + cos(-\omega) + i sin(-\omega) \rvert \\
+&= \frac{1}{2} \sqrt[]{(1 + cos(\omega))^2 + sin(\omega)^2} \\
+&= \frac{1}{2} \sqrt[]{1 + cos^2(\omega) + 2cos(\omega) + sin^2(\omega)} \\
+&= \frac{1}{2} \sqrt[]{2 + 2cos(\omega)} \\
+&= \frac{1}{2} \sqrt[]{4(\frac{1 + cos(\omega)}{2})} \\
+&= cos(\frac{\omega}{2})
+\end{aligned}$
 
-\end{enumerate}
-
-\section*{Bonus}
-\begin{enumerate}
-\item 
-
-\item
-
-\item
-
-\item
-
-\item
+Then, for $\omega = 2\pi f$, the amplitude response as a function of $f$ is $cos(\frac{2\pi f}{2})$ and looks as follows:\\\\
+\includegraphics[scale=0.55]{hw2-img.png}
 
 \end{enumerate}
 
