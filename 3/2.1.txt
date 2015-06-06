@@ -1,0 +1,9 @@
+a) the minimum sample rate is 10kHz and 1/10kH0z = 0.0001 s
+b) if the samplerate is 10kHz, then T is 0.0001s. we use this to convert the angular frequency to an ordinary one using the following formula:
+
+	w = (pi/8)/T = 2*pi*f
+
+   solve for f: 625 Hz
+
+c) same as above with T = 0.0002 -> 312.5
+
