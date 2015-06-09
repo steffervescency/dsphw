@@ -14,7 +14,7 @@
 
 \title{Digital Signal Processing - Assignment 4}
 \line
-\leftright{\today}{Stephanie Lund (2555914)\\Aljoscha Dietrich(2557976)} %-- left and right positions in the header
+\leftright{\today}{Stephanie Lund (2555914)\\Aljoscha Dietrich (2557976)} %-- left and right positions in the header
 
 \section*{Exercise 1}
 
@@ -44,8 +44,8 @@ x(n+2) &= [1, -1, 0, 2, 0, 0]\\
 Therefore, the autocorrelation matrix $R_{xx}$ with order 2 and window size of 6 is:
 \begin{align*}
 \begin{bmatrix}
-x(n)*x(n) & x(n)*x(n+1) \\
-x(n)*x(n+1) & x(n)*x(n)
+r(0) & r(1) \\
+r(1) & r(0)
 \end{bmatrix}
 = \begin{bmatrix}
 10/6 & -1/6 \\
@@ -63,8 +63,8 @@ a_2
 \end{bmatrix}
 =
 \begin{bmatrix}
-x(n) * x(n+1) \\
-x(n+1) * x(n+2)
+r(1)\\
+r(2)
 \end{bmatrix}
 =
 \begin{bmatrix}
