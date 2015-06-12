@@ -9,7 +9,7 @@ function [P, V] = PCA(D)
    covar = cov(subtract_mean);
    
    % compute eigenvalues and eigenvectors
-   [eigenvals, eigenvecs] = eig(covar);
+   [eigenvecs, eigenvals] = eig(covar);
    eigenvals = diag(eigenvals);
    
    % sort the eigenvalues and eigenvectors
