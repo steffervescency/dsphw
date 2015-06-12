@@ -26,7 +26,23 @@ TODO: finish code and generate graph
 % \includegraphics[scale=0.5]{hw5-1.png}
 
 \section*{Exercise 2}
-TODO
+If $z_1$ and $z_2$ are independent, the covariance matrix is:
+\begin{align*}
+\begin{bmatrix}
+E[(z_1 - \mu_1)^2] & E[(z_1 - \mu_1)(z_2 - \mu_2)]^2 \\
+E[(z_1 - \mu_1)(z_2 - \mu_2)]^2 & E[(z_2 - \mu_2)^2] 
+\end{bmatrix}
+\end{align*}
+
+To show that the matrix is diagonal, we need to show that $E[(z_1 - \mu_1)(z_2 - \mu_2)]^2 = 0$.
+\begin{align*}
+E[(z_1 - \mu_1)(z_2 - \mu_2)] &= E[z_1 z_2 - z_1 \mu_2 - z_2 \mu_1 + \mu_1 \mu_2)]\\
+&= E[z_1 z_2] - E[z_1]E[z_2] - E[z_1]E[z_2] + E[z_1]E[z_2] \\
+&= E[z_1 z_2] - E[z_1]E[z_2] \\
+&= 0
+\end{align*}
+
+The last step is true since $z_1$ and $z_2$ are independent.\\
 
 \section*{Bonus}
 TODO
