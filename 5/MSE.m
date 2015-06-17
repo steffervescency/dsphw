@@ -12,8 +12,8 @@ N = size(data,2);
 i = 1;
 while i <= N
     x = data(i,:)';
-    y = P_l_trans * x;  
-    sum = sum + abs(x-(P_l*y+D_e')).^2;
+    y = P_l_trans * x;
+    sum = sum + norm(x-(P_l*y+D_e'))^2;
     i = i+1;
 end
 e_l = sum/N;
