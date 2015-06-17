@@ -16,7 +16,7 @@ while i <= N
     sum = sum + abs(x-(P_l*y+D_e')).^2;
     i = i+1;
 end
-e_l = sum/16;
+e_l = sum/N;
 plot(e_l);
 
 
