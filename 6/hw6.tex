@@ -33,24 +33,16 @@ Next, rewrite them as a series of linear equations:
 \left[ \sum_{i=1}^N x_i\right]a + \left[ \sum_{i=1}^N 1\right] b &=  \sum_{i=1}^N y_i
 \end{align*}
 
-Then solve the equation for $a$ and $b$ (the matrix is invertible as long as all of the $x_i$ are not equal):
+Then solve the equations for $a$ and $b$:
 
 \begin{align*}
-\begin{pmatrix}
-a\\ \\ b
-\end{pmatrix}
-=
-\begin{pmatrix}
-\sum_{i=1}^N x_i^2 & \sum_{i=1}^N x_i\\ \\
-\sum_{i=1}^N x_i & \sum_{i=1}^N 1
-\end{pmatrix}^{-1}
-\begin{pmatrix}
-\sum_{i=1}^N x_iy_i\\ \\
-\sum_{i=1}^N y_i
-\end{pmatrix}
+a =& \frac{N \sum_{i=1}^N(x_iy_i) - \sum_{i=1}^Nx_i\sum_{i=1}^Ny_i}{N\sum_{i=1}^Nx_i^2 - \left(\sum_{i=1}^Nx_i\right)^2}
+\\ \\
+b =& \frac{\sum_{i=1}^Ny_i - \left(\sum_{i=1}^Nx_i\right)a}{N}
 \end{align*}
+
 \subsection*{1.2}
-TODO
+The results from the attached Matlab script hw12.m are $a = -0.3613$ and $b = 1.1576$.
 
 \section*{Exercise 2}
 TODO
