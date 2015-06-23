@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{url,graphicx,tabularx,array,geometry,enumitem,amsmath}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+
+%\linespread{2} %-- Uncomment for Double Space
+\begin{document}
+
+\title{Digital Signal Processing - Assignment 6}
+\line
+\leftright{\today}{Stephanie Lund (2555914)\\Aljoscha Dietrich (2557976)} %-- left and right positions in the header
+
+\section*{Exercise 1}
+
+\subsection*{1.1}
+This is the Method of Least Squares, which can be solved as follows. First, find the partial derivatives by $a$ and $b$, and set them to $0$:
+
+\begin{align*}
+\frac{\partial \epsilon}{\partial a} &= \sum_{i=1}^N 2x_i(ax_i + b - y_i) = 0 \\\\
+\frac{\partial \epsilon}{\partial b} &= \sum_{i=1}^N 2(ax_i + b - y_i) = 0
+\end{align*}
+
+Next, rewrite them as a series of linear equations:
+
+\begin{align*}
+\left[ \sum_{i=1}^N x_i^2\right]a + \left[ \sum_{i=1}^N x_i\right] b &= \sum_{i=1}^N x_iy_i  \\\\
+\left[ \sum_{i=1}^N x_i\right]a + \left[ \sum_{i=1}^N 1\right] b &=  \sum_{i=1}^N y_i
+\end{align*}
+
+Then solve the equation for $a$ and $b$ (the matrix is invertible as long as all of the $x_i$ are not equal):
+
+\begin{align*}
+\begin{pmatrix}
+a\\ \\ b
+\end{pmatrix}
+=
+\begin{pmatrix}
+\sum_{i=1}^N x_i^2 & \sum_{i=1}^N x_i\\ \\
+\sum_{i=1}^N x_i & \sum_{i=1}^N 1
+\end{pmatrix}^{-1}
+\begin{pmatrix}
+\sum_{i=1}^N x_iy_i\\ \\
+\sum_{i=1}^N y_i
+\end{pmatrix}
+\end{align*}
+\subsection*{1.2}
+TODO
+
+\section*{Exercise 2}
+TODO
+
+\end{document}
