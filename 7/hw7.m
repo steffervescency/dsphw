@@ -1,6 +1,11 @@
 [data, fs] = audioread('point8.au');
 
-[I, J] = ndgrid(1:8, 1:8);
-A = [getGCC(data(:, I), data(:, J))];
+% Calculate the matrix
+A = zeros(8, 8);
+for i = 1:8
+    for j = 1:8
+       A(i, j) = getGCC(data(:, i), data(:, j))/44100;
+    end
+end
 
 A

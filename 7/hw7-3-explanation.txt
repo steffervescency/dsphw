@@ -1,0 +1,3 @@
+The code and explanation for Exercise 3 is located in hw7.m and getGCC.m.
+    
+We were not able to exactly estimate the speaker direction, since the method above assumes two microphones. It would be possible to calculate each of the pairwise angles, however, we would still need a method to combine the angles to determine the direction of the speaker.
