@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{url,graphicx,tabularx,array,geometry,enumitem,amsmath}
+\setlength{\parskip}{1ex} %--skip lines between paragraphs
+\setlength{\parindent}{0pt} %--don't indent paragraphs
+
+%-- Commands for header
+\renewcommand{\title}[1]{\textbf{#1}\\}
+\renewcommand{\line}{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}\hline\\\end{tabularx}\\[-0.5cm]}
+\newcommand{\leftright}[2]{\begin{tabularx}{\textwidth}{X>{\raggedleft}X}#1%
+& #2\\\end{tabularx}\\[-0.5cm]}
+\def\ci{\perp\!\!\!\perp}
+
+
+%\linespread{2} %-- Uncomment for Double Space
+\begin{document}
+
+\title{Digital Signal Processing - Assignment 8}
+\line
+\leftright{\today}{Stephanie Lund (2555914)\\Stalin Varanasi (2556235)} %-- left and right positions in the header
+
+\section*{Exercise 1}
+
+\subsection*{1.1}
+We can use the error function:
+\begin{align*}
+e(n) = s(n) - \hat{s}(n) = s(n) - h(n) \ast x(n)
+\end{align*}
+
+converted to the frequency domain to find $J(\omega)$. Using the properties of additivity, and that convolution in the time domain is multiplication in the frequency domain, this is:
+\begin{align*}
+J(\omega) = S(\omega) - H(\omega)X(\omega)
+\end{align*}
+
+\subsection*{1.2}
+\begin{align*}
+E[J(\omega)^2] &= E[(S(\omega) - H(\omega)X(\omega))^2] \\
+&= (S(\omega))^2 - 2S(\omega)H(\omega)X(\omega) + (H(\omega)X(\omega))^2 \\
+\end{align*}
+
+TODO: take the derivative $\frac{\partial J}{\partial H(\omega)}$, set to zero, somehow algebra it into the given equation\\
+
+\subsection*{1.3}
+\begin{align*}
+H(\omega) = \frac{\Phi_{sx}(\omega_k)}{\Phi_{ss}(\omega_k) \Phi_{nn}(\omega_k)}
+\end{align*}
+
+TODO: figure out how to handle the numerator
+
+\subsection*{1.4}
+should just be multiply by $X(\omega)$ and take the inverse fourier transform? double-check this
+
+\subsection*{1.5}
+TODO, answer 1.3 is probably helpful
+
+\subsection*{1.6}
+TODO
+
+\end{document}
