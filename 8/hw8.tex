@@ -74,5 +74,16 @@ H(\omega) &= \frac{\Phi_{ss}(\omega)}
 
 \subsection*{1.6}
 
+For $SNR_k$ in the range $[0, 30]$, using the above equation we get the frequency responses:\\
+$[ 0    ,  0.5       ,  0.66666667,  0.75      ,  0.8       ,
+        0.83333333,  0.85714286,  0.875     ,  0.88888889,  0.9       ,
+        0.90909091,\\0.91666667,  0.92307692,0.92857143,  0.93333333,
+        0.9375    ,  0.94117647,  0.94444444,  0.94736842,\\  0.95      ,
+        0.95238095,  0.95454545,  0.95652174,  0.95833333,  0.96      ,
+        0.96153846,  0.96296296,  0.96428571,\\0.96551724,  0.96666667,
+        0.96774194]$ \\ \\
+        
+  If we take $20*log(H(\omega) + \epsilon)$ (where $\epsilon$ is a small number to prevent taking the log of 0) and plot it against $SNR_k$, we get the following graph:
 
+\includegraphics[scale=0.7]{hw8.png}
 \end{document}
