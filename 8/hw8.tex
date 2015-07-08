@@ -33,26 +33,46 @@ J(\omega) = S(\omega) - H(\omega)X(\omega)
 
 \subsection*{1.2}
 \begin{align*}
-E[J(\omega)^2] &= E[(S(\omega) - H(\omega)X(\omega))^2] \\
-&= (S(\omega))^2 - 2S(\omega)H(\omega)X(\omega) + (H(\omega)X(\omega))^2 \\
+E[J(\omega)^2] &= E[(S(\omega) - H(\omega)X(\omega))^2] \\\\
+&= E[(S(\omega))^2 - 2S(\omega)H(\omega)X(\omega) + (H(\omega)X(\omega))^2] \\\\
+\frac{\partial J}{\partial H(\omega)} &= E[-2S(\omega)X(\omega) + 2H(\omega)X(\omega)] = 0
 \end{align*}
 
-TODO: take the derivative $\frac{\partial J}{\partial H(\omega)}$, set to zero, somehow algebra it into the given equation\\
+TODO: finish this
 
 \subsection*{1.3}
+From $X(\omega) = S(\omega) + N(\omega)$, we have:
 \begin{align*}
-H(\omega) = \frac{\Phi_{sx}(\omega_k)}{\Phi_{ss}(\omega_k) \Phi_{nn}(\omega_k)}
+H(\omega) &= \frac{\Phi_{sx}(\omega)}{\Phi_{xx}(\omega)} \\ \\
+&=
+\frac{E[X(\omega)S(\omega)] - E[X(\omega)]E[S(\omega)]}{E[X(\omega)^2] - E[X(\omega)]^2}\\ \\
+&=
+\frac{E[(S(\omega) + N(\omega))S(\omega)] -  E[(S(\omega) + N(\omega))]E[S(\omega)]}
+{E[(S(\omega) + N(\omega))^2] - E[(S(\omega) + N(\omega))]^2} \\ \\
+&=
+\frac{E[(S(\omega)^2] + E[N(\omega)S(\omega)] -  (E(S(\omega)]^2 + E[N(\omega)S(\omega)])}
+{E[S(\omega)^2] + 2E[S(\omega)]E[N(\omega)] + E[N(\omega)^2] - (E[S(\omega)]^2 + 2E[S(\omega)]E[N(\omega)] + E[N(\omega)]^2)} \\ \\
+&=
+\frac{\Phi_{ss}(\omega)}
+{\Phi_{ss}(\omega) + \Phi_{nn}(\omega)}
 \end{align*}
 
-TODO: figure out how to handle the numerator
-
 \subsection*{1.4}
-should just be multiply by $X(\omega)$ and take the inverse fourier transform? double-check this
+
+We can multiply the frequency response $H(\omega)$ by the Fourier transform of the input $X(\omega)$ to get the result in the frequency domain, then take the inverse Fourier transform to find the denoised signal in the time domain $\hat{s}(n)$.
 
 \subsection*{1.5}
-TODO, answer 1.3 is probably helpful
+Using the equation from question $1.3$, this is:
+
+\begin{align*}
+H(\omega) &= \frac{\Phi_{ss}(\omega)}
+{\Phi_{ss}(\omega) + \Phi_{nn}(\omega)} \\ \\
+&= \frac{\Phi_{ss}(\omega) / \Phi_{nn}(\omega)}
+{\Phi_{ss}(\omega) / \Phi_{nn}(\omega) + \Phi_{nn}(\omega) / \Phi_{nn}(\omega)} \\ \\
+&= \frac{SNR_k}{SNR_k + 1}
+\end{align*}
 
 \subsection*{1.6}
-TODO
+
 
 \end{document}
